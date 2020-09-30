@@ -1,0 +1,809 @@
+/* loginWord,loginCodereset,setting style  */
+.wrapper{
+    margin: 0 auto;
+    width: 7.5rem;
+    height: 13.34rem;
+    overflow: hidden;
+    position: relative;
+}
+.wrapper .welcome{
+    width: 100%;
+    font-size:0.52rem;
+    font-family:PingFang SC;
+    font-weight:bold;
+    color:rgba(69,73,72,1);
+}
+.wrapper .welcome h1{
+    margin-top: 0.73rem;
+    margin-left: 0.68rem;
+    width: 100%;
+}
+
+.wrapper .input{
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+.wrapper .input input{
+    width: 100%;
+    margin-left: 0.68rem;
+    font-size:0.32rem;
+    font-family:PingFang SC;
+    color:rgba(69,73,72,1);
+}
+.wrapper .input input:nth-of-type(1){
+    margin-top: 1.25rem;
+}
+.wrapper .input .password{
+    margin-top: 1.02rem;
+}
+.wrapper .input img{
+    width: 0.28rem;
+    height: 0.28rem;
+    position: absolute;
+    left: 6.61rem;
+    display: none;
+}
+.wrapper .input img:nth-of-type(1){
+    top: 1.3rem;
+}
+.wrapper .input img:nth-of-type(2){
+    top: 2.79rem;
+}
+.wrapper .input .code{
+    left: 5.12rem;
+    bottom: 0.025rem;
+}
+.wrapper .login{
+    position: relative;
+}
+.wrapper  .remind{
+    width: 3.08rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    margin-left: 2.21rem;
+    margin-top: 0.75rem;
+    background:rgba(49,49,50,1);
+    opacity:0.8;
+    border-radius:0.3rem;
+    text-align: center;
+    color: #fff;
+    font-size: 0.28rem;
+    display: none;
+    position: absolute;
+}
+.wrapper .goToWord .remind{
+    margin-top: -0.9rem;
+}
+
+.clearfix::after{
+    display: block;
+    content: " ";
+    font-size: 0;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+}
+.wrapper .login .change{
+    display: inline-block;
+    font-size:0.28rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(16,196,167,1);
+    margin-top: 0.62rem;
+    margin-left: 5.64rem;
+}
+.wrapper .input .getCode{
+    font-size:0.28rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(16,196,167,1);
+    position: absolute;
+    bottom: 0rem;
+    left: 5.64rem;
+}
+.wrapper .input p{
+    width: 6.56rem;
+    height: 0.01rem;
+    margin-left: 0.47rem;
+    margin-top: 0.28rem;
+    background:rgba(205,203,204,1);
+}
+.wrapper .login .goNext{
+    width: 6.28rem;
+    height: 0.88rem;
+    text-align: center;
+    background:#93E4D7FF;
+    border-radius:0.44rem;
+    font-size:0.36rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(248,248,248,1);
+    line-height: 0.88rem;
+    margin-top: 0.66rem;
+    margin-left: 0.61rem;
+}
+.wrapper .login .goNext1{
+    width: 6.28rem;
+    height: 0.88rem;
+    text-align: center;
+    background:rgba(16,196,167,1);
+    border-radius:0.44rem;
+    font-size:0.36rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(248,248,248,1);
+    line-height: 0.88rem;
+    margin-top: 1.65rem;
+    margin-left: 0.61rem;
+}
+.wrapper .login .goCode{
+    margin-top: 0.68rem;
+    text-align: center;
+}
+.wrapper .login .goCode span{
+    font-size:0.32rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(69,73,72,1);
+}
+.wrapper .login .goCode img{
+    width: 0.098rem;
+    height: 0.196rem;
+    margin-bottom: 0.1rem;
+    margin-left: 0.1rem;
+}
+.wrapper .login .goWord{
+    margin-top: 0.68rem;
+    text-align: center;
+}
+.wrapper .login .goWord span{
+    font-size:0.32rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(69,73,72,1);
+}
+.wrapper .login .goWord img{
+    width: 0.098rem;
+    height: 0.196rem;
+    margin-bottom: 0.1rem;
+    margin-left: 0.1rem;
+}
+.wrapper .bottom{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    font-size:0.26rem;
+    font-family:Source Han Sans CN;
+    font-weight:400;
+    color:rgba(69,73,72,1);
+    text-align: center;
+}
+
+.wrapper .bottom p:nth-of-type(2){
+    margin-top: 0.18rem;
+    margin-bottom: 0.6rem;
+    color: #A7ABAAFF;
+}
+.wrapper .bottom p:nth-of-type(2) span{
+    color:rgba(69,73,72,1);
+}
+#remind,#remind1,#remind2{
+    margin-top: 6rem;
+}
+.wrapper .btn,.btn1{
+    width:6.56rem;
+    height:0.88rem;
+    background:rgba(147,228,215,1);
+    border-radius:0.44rem;
+    text-align: center;
+    line-height: 0.88rem;
+    color:rgba(255,255,255,1);
+    font-size:0.36rem;
+    margin-top: 2.08rem;
+    margin-left: 0.47rem;
+}
+
+
+/* coupons style */
+.container{
+    position: relative;
+    width: 7.5rem;
+    margin: 0 auto;
+}
+.container .head {
+    height: 0.6rem;
+    font-size:0.36rem;
+    font-family:PingFang SC;
+    font-weight:bold;
+    color:rgba(69,73,72,1);
+    background: #fff;
+    text-align: center;
+}
+.container .welcome{
+    width: 100%;
+    height: 1.54rem;
+    line-height: 1.54rem;
+}
+.container .welcome h1{
+    font-size:0.36rem;
+    font-family:PingFang SC;
+    font-weight:bold;
+    color:rgba(69,73,72,1);
+    margin-left: 0.34rem;
+}
+
+.container .mescroll{
+    height: 10rem;
+    overflow: auto;
+}
+.container .mescroll .allCoupons{
+    margin-left: 0.32rem;
+    position: relative;
+}
+.container .mescroll .coupons{
+    margin-bottom: 0.2rem;
+    width: 7.18rem;
+    height: 1.8rem;
+    display: flex;
+    align-items: center;
+    background: url('../img/my_service_ticket@2x.png') no-repeat;
+    background-size: 100%;
+    
+}
+.container .mescroll .coupons .left{
+    width: 1.86rem;
+    font-size:0.4rem;
+    font-family:PingFang SC;
+    font-weight:bold;
+    color:rgba(255,255,255,1);
+}
+.container .mescroll .coupons .left i:nth-of-type(1){
+    margin-left: 0.36rem;
+    margin-top: 0.2rem;
+}
+.container .mescroll .coupons .left i:nth-of-type(2){
+    font-size: 0.68rem;
+    margin-left: 0.1rem;
+}
+.container .mescroll .coupons .mid{
+    height: 1.8rem;
+    font-size:0.24rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(69,73,72,1);
+    margin-left: 0.4rem;
+}
+.container .mescroll .coupons .mid p:nth-of-type(1){
+    font-size:0.3rem;
+    font-weight:bold;
+    margin-top: 0.14rem;
+    margin-bottom: 0.1rem;
+}
+.container .mescroll .coupons .mid p{
+    margin-top: 0.05rem;
+    width: 3rem;
+}
+.container .mescroll .coupons .right{
+    position: relative;
+    overflow: hidden;
+}
+.container .mescroll .coupons .right span{
+    display: inline-block;
+    width: 1.12rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    background:rgba(255,93,73,1);
+    border-radius:0.2rem;
+    font-size:0.24rem;
+    font-family:Alibaba PuHuiTi;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+    margin-left: 0.6rem;
+    text-align: center;
+}
+.container .mescroll .coupons .right img{
+    position: absolute;
+    width: 0.7rem;
+    height: 0.8rem;
+    left: 2rem;
+    bottom: -0.22rem;
+    display: none;
+
+}
+
+.container .bottom{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    font-size:0.32rem;
+    font-family:PingFang SC;
+    font-weight:bold;
+    color:rgba(69,73,72,1);
+}
+.container .bottom span:nth-of-type(1){
+    margin-left: 1.08rem;
+}
+.container .bottom span:nth-of-type(2){
+    margin-left: 2.23rem;
+}
+.animate-slide{
+    transform: translateX(-1rem) !important;
+}
+.container .empty{
+    background: url('../img/img_vavancy_no@2x.png');
+    background-size: 100%;
+    width: 5.43rem;
+    height: 4.86rem;
+    position: absolute;
+    top: 3.28rem;
+    left: 1.04rem;
+    display: none;
+}
+.container .empty p{
+    font-size:0.32rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(167,171,170,1);
+    margin-left: 1.92rem;
+    margin-top: 4rem;
+}
+
+.container .drop-down{
+    display: none;
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: 12.7rem;
+    font-size:0.28rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(69,73,72,1);
+    overflow: hidden;
+}
+
+.container .drop-down .dropContainer{
+    background: #fff;
+}
+.container .drop-down li{
+    width: 100%;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    
+}
+.container .drop-down li:nth-of-type(1){
+    margin-top: 0.27rem;
+}
+.container .drop-down span{
+    display: inline-block;
+    margin-left: 0.6rem;
+    width: 2.147rem;
+}
+.container .drop-down i{
+    width: 0.4927rem;
+    margin-left: 0.52rem;
+}
+.container .drop-down img{
+    margin-left: 3rem;
+    width: 0.318rem;
+    height: 0.244rem;
+    position: relative;
+    display: none;
+}
+.container .drop-down .changeBg{
+    width: 100%;
+    height: 8.3rem;
+    background: rgba(69, 73, 72, 0.6) !important;
+}
+.selected{
+    color: #10C4A7FF;
+}
+
+
+
+/* new style */
+.new{
+    width: 7.5rem;
+    margin: 0 auto;
+    height: 13.34rem;
+    font-size: 0.3rem;
+    font-weight:500;
+    color:rgba(69,73,72,1);
+    overflow: hidden;
+    position: relative;
+}
+.city{
+    font-size: 0.3rem;
+    font-weight:500;
+    color:rgba(69,73,72,1);
+    width: 100%;
+    height: 0.88rem;
+}
+.city span{
+    line-height: 0.88rem;
+}
+.city span:nth-of-type(1){
+    margin-left: 0.31rem;
+    display: inline-block;
+}
+.city span:nth-of-type(2){
+    margin-left: 0.4rem;
+    display: inline-block;
+}
+#J_Address{
+    caret-color: transparent;
+    height: 0.5rem;
+    margin-left: 0.49rem;
+    width: 3rem;
+    font-size: 0.3rem;
+    vertical-align: baseline;
+
+}
+
+.setting{
+    width: 100%;
+    height: 0.88rem;
+    line-height: 0.88rem;
+
+}
+.setting span{
+    margin-left: 0.31rem;
+}
+.setting input{
+    height: 0.88rem;
+    font-size:0.3rem;
+    margin-left: 0.49rem;
+    width: 5rem;
+    vertical-align: baseline;
+}
+.type{
+    width: 100%;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    margin-left: 0.31rem;
+}
+.type span:nth-of-type(2){
+    margin-left: 0.49rem;
+    color: #CDCBCCFF;
+}
+
+.time{
+    width: 100%;
+    height: 0.88rem;
+    /* line-height: 0.88rem; */
+    margin-left: 0.31rem;
+}
+.time span:nth-of-type(2){
+    margin-left: 0.8rem;
+}
+.time input{
+    width: 0.6rem;
+    text-align: center;
+    font-size: 0.3rem;
+}
+.number1{
+    width: 100%;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    margin-left: 0.31rem;
+}
+.number1 span:nth-of-type(2){
+    margin-left: 1.09rem;
+    color: #CDCBCCFF;
+}
+.number1 span:nth-of-type(3){
+    margin-left: 0.4rem;
+}
+.number1 span:nth-of-type(4){
+    margin-left: 0.4rem;
+}
+.confirm{
+    width: 6.86rem;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    text-align: center;
+    margin-top: 2.65rem;
+    margin-left: 0.32rem;
+    background:rgba(147, 228, 215, 1);
+    border-radius:0.44rem;  
+    font-size:0.36rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(247,247,247,1);
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    
+}
+.bottom .changeBg{
+    width: 100%;
+    height: 9.34rem;
+    background:rgba(69, 73, 72, 0.5) ;
+}
+.bottom .content{
+    width: 100%;
+    height: 4rem;
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    font-size:0.32rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(8,16,26,1);
+}
+
+
+
+.bottom .first {
+    width: 100%;
+    height: 1rem;
+    font-size: 0.32rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.bottom .first span:nth-of-type(1){
+    color: #A7ABAAFF;
+}
+.bottom .first span:nth-of-type(3){
+    color: #10C4A7FF;
+}
+
+
+.bottom .content .serviceType p {
+    width: 100%;
+    height: 1rem;
+    margin: 0;
+    line-height: 1rem;
+    text-align: center;
+    font-size: 0.32rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: rgba(167, 171, 169, 1);
+}
+.black{
+    color: #08101AFF !important;
+}
+.remind{
+    width: 100%;
+    height: 13.34rem;
+    background: rgba(69, 73, 72, 0.5);
+    position: absolute;
+    top: 0;
+    display: none;
+}
+.remind .text{
+    position: absolute;
+    width: 6.24rem;
+    height: 4.97rem;
+    top: 4.19rem;
+    left: 0.63rem;
+    background:rgba(255,255,255,1);
+    border-radius:0.24rem;
+}
+.remind .text h2{
+    font-size:0.36rem;
+    font-family:PingFang SC;
+    font-weight:bold;
+    color:rgba(69,73,72,1);
+    text-align: center;
+    padding-top: 0.4rem;
+}
+.remind .text span{
+    display: inline-block;
+    font-size:0.32rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(69,73,72,1);
+    padding-top: 0.39rem;
+    padding-left: .22rem;
+}
+.remind .text p{
+    width:5.6rem;
+    height:0.8rem;
+    line-height: 0.8rem;
+    background:rgba(16,196,167,1);
+    border-radius:0.4rem;
+    text-align: center;
+    margin-top: 0.39rem;
+    margin-left:0.32rem ;
+    color: #fff;
+}
+
+
+/* giving style */
+.container{
+    width: 7.5rem;
+    margin: 0 auto;
+}
+.person{
+    width: 6.86rem;
+    height: 0.88rem;
+    margin-top: 0.32rem;
+    margin-left: 0.32rem;
+    font-size:0.3rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(69,73,72,1);
+    line-height: 0.88rem;
+}
+
+.person input{
+    font-size: 0.3rem;
+    margin-left: 0.48rem;
+    vertical-align: baseline;
+    width: 4.5rem;
+}
+.pay{
+    font-size:0.3rem;
+    font-family:PingFang SC;
+    font-weight:bold;
+    color:rgba(69,73,72,1);
+    margin-left: 0.31rem;
+    margin-top: 0.4rem;
+}
+.payType{
+    margin-top: 0.59rem;
+}
+.payType span{
+    font-size:0.3rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(69,73,72,1);
+    margin-left: 0.2rem;
+    vertical-align: middle;
+}
+.payType img:nth-of-type(1){
+    width: 0.4rem;
+    height: 0.37rem;
+    margin-left: 0.32rem;
+}
+.payType img:nth-of-type(2){
+    width: 0.404rem;
+    height: 0.403rem;
+    margin-left: 4.11rem;
+}
+.payMoney{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 1.27rem;
+    line-height: 1.27rem;
+    font-size: 0;
+}
+.payMoney span:nth-of-type(1){
+    font-size:0.36rem;
+    font-family:PingFang SC;
+    font-weight:bold;
+    color:rgba(255,88,0,1);
+    vertical-align: bottom;
+    margin-left: 0.35rem;
+}
+.payMoney span:nth-of-type(1) i{
+    margin-top: -0.2rem;
+    font-size: 0.6rem;
+}
+.payMoney span:nth-of-type(2){
+    display: inline-block;
+    width: 2.26rem;
+    height: 0.76rem;
+    line-height: 0.76rem;
+    text-align: center;
+    font-size:0.28rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(238,238,237,1);
+    background:#93E4D7FF;
+    border-radius:0.38rem;
+    margin-left: 2.8rem;
+    vertical-align: middle;
+}
+
+/* pay style */
+.payImg img{
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-top: 2.27rem;
+    margin-left: 2.95rem;
+}
+.paySuccess{
+    font-size:0.36rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(69,73,72,1);
+    margin-top: 0.27rem;
+    margin-left: 3.05rem;
+}
+.company{
+    font-size:0.36rem;
+    font-family:PingFang SC;
+    font-weight:bold;
+    color:rgba(69,73,72,1);
+    margin-top: 0.84rem;
+    margin-left: 1.68rem;
+}
+.showMoney{
+    font-size:0.6rem;
+    font-family:PingFang SC;
+    font-weight:bold;
+    color:rgba(69,73,72,1);
+    margin-top: 0.38rem;
+    margin-left: 2.7rem;
+}
+.check{
+    margin-top: 4.22rem;
+    margin-left: 0.32rem;
+    width: 6.86rem;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    text-align: center;
+    font-size:0.36rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(247,247,247,1);
+    background:rgba(16,196,167,1);
+    border-radius:0.44rem;
+}
+
+
+/* records style */
+.reWrapper{
+    width: 7.5rem;
+    margin: 0 auto;
+}
+.reWrapper .mescroll{
+    height: 13.34rem;
+}
+.allRe .re {
+    width: 6.86rem;
+    height: auto;
+    margin-left: 0.15rem;
+    padding-top: 0.2rem;
+    font-size:0.28rem;
+    font-family:PingFang SC;
+    font-weight:bold;
+    color:rgba(69,73,72,1);
+    border-bottom: 0.01rem solid rgba(69,73,72,1);
+}
+
+
+.allRe .re .head span:nth-of-type(1){
+    margin-left: 0.32rem;
+    margin-top: 0.31rem;
+}
+.allRe .re .head span:nth-of-type(2){
+    margin-left: 3.9rem;
+    margin-top: 0.31rem;
+    color: #A7ABAAFF;
+}
+.allRe .re .content{
+    font-weight: normal;
+    margin-top: 0.54rem;
+    margin-left: 0.32rem;
+    margin-bottom: 0.23rem;
+}
+.allRe .re .refund{
+    margin-left: 4.37rem;
+    width: 2.17rem;
+    height: 0.6rem;
+    background:rgba(16,196,167,1);
+    border-radius:0.3rem;
+    font-size:0.28rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+    line-height:0.6rem;
+    text-align: center;
+    margin-bottom: 0.2rem;
+}

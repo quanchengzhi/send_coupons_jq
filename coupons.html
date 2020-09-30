@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>我的卡券</title>
+    <link media="all" rel="stylesheet" href="static/css/init.css" type="text/css">
+    <link media="all" rel="stylesheet" href="static/css/common.css" type="text/css">
+    <link media="all" rel="stylesheet" href="static/css/mescroll.min.css" type="text/css">
+</head>
+
+<body>
+    <div class="container clearfix">
+        <div class="head"><span>我的卡券</span></div>
+        <div class="drop-down">
+            <ul class="dropContainer">
+                <li>
+                    <span>标准洗车(不限)</span>
+                    <i>999</i>
+                    <img class="check1" src="./static/img/card_selection@2x.png" alt="">
+                </li>
+                <li>
+                    <span>精致洗车(不限)</span>
+                    <i>30</i>
+                    <img class="check1" src="./static/img/card_selection@2x.png" alt="">
+                </li>
+                <li>
+                    <span>磨泥打蜡</span>
+                    <i>5</i>
+                    <img class="check1" src="./static/img/card_selection@2x.png" alt="">
+                </li>
+                <li>
+                    <span>机油保养(矿物质)</span>
+                    <i>30</i>
+                    <img class="check1" src="./static/img/card_selection@2x.png" alt="">
+                </li>
+                <li>
+                    <span>机油保养(半合成)</span>
+                    <i>9</i>
+                    <img class="check1" src="./static/img/card_selection@2x.png" alt="">
+                </li>
+            </ul>
+            <div class="changeBg"></div>
+        </div>
+        <div class="welcome">
+            <h1>Hi~欢迎代理人登录!</h1>
+        </div>
+        <div class="empty">
+            <p>暂无服务券</p>
+        </div>
+        <div class="mescroll" id="mescroll">
+            <ul class="allCoupons" id="allCoupons">
+                <!-- <li class="coupons">
+                    <span class="left">
+                        <i>¥</i>
+                        <i>50</i></span>
+                    <span class="mid">
+                        <p>标准洗车-车险专享</p>
+                        <p>深圳全城通用</p>
+                        <p>自用户领取10天后生效</p>
+                        <p>有效期30天</p>
+                    </span>
+                    <span class="right clearfix">
+                        <span>赠送</span>
+                        <img src="./static/img/card_del@2x.png" alt="">
+                    </span>
+                </li> -->
+            </ul>
+        </div>
+        <div class="bottom" style="display: block;">
+            <span>新增服务券</span>
+            <span>赠券记录</span>
+        </div>
+
+    </div>
+    <script src="./static/js/rem.js"></script>
+    <script src="./static/js/mescroll.min.js"></script>
+    <script src="./static/js/jquery-1.9.1.js"></script>
+    <script src="./static/js/common.js"></script>
+    <script src="./static/js/myScroll.js"></script>
+    <script>
+        $('.allCoupons').on('click', '.giving', function () {
+            window.location.href = "./giving.html"
+        })
+        $('.bottom').children(":first").on('click', function () {
+            window.location.href = './new.html';
+        })
+        $('.bottom').children(":last").on('click', function () {
+            window.location.href = './records.html';
+        })
+        function emptyToggle() {
+            if ($('.allCoupons').height() == 0) {
+                $('.empty').show();
+                $('.allCoupons').siblings('.mescroll-upwarp').hide();
+            } else {
+                $('.empty').hide();
+                $('allCoupons').siblings('.mescroll-upwarp').show();
+            }
+        }
+
+        $('.head').click(function () {
+            event.stopPropagation();
+            $('.drop-down').toggle();
+            $('.dropContainer li').siblings('li').children('img').hide();
+            $('.dropContainer li').siblings('li').removeClass('selected');
+        })
+        $('.changeBg').click(function () {
+            // event.stopPropagation();
+            $('.drop-down').toggle();
+        })
+        $('.dropContainer li').click(function () {
+            $(this).siblings('li').children('img').hide();
+            $(this).siblings('li').removeClass('selected');
+            $(this).addClass('selected');
+            $(this).children('img').show();
+        })
+
+        $(function () {
+            //手指滑动多少距离就认为是滑成功
+            //这个值不能太大，否则影响斜着滑动时，垂直滑动的流畅性，也不能太小，太灵敏也不好
+            var diffXDistance = 50;
+            //当前滑动的对象
+            var currentObject;
+            //上一次滑动的对象
+            var lastObject;
+            var close;
+            //是否可以左右滑动，在上下滑的时候禁止左右滑
+            var canSlide = true;
+            //用于记录按下的点
+            var startPoint;
+            $(".allCoupons")
+                .on('touchstart', '.coupons', function (e) {
+                    currentObject = this;
+                    $('.allCoupons').on('click', '.close', function () {
+                        $(currentObject).remove();
+                        emptyToggle();
+                    })
+                    startPoint = {
+                        x: e.originalEvent.changedTouches[0].pageX,
+                        y: e.originalEvent.changedTouches[0].pageY
+                    };
+                })
+                .on('touchmove', '.coupons', function (e) {
+                    //如果是左右滑动，就禁止上下的滑动
+                    //如果是上下的滑动，就禁止左右滑动
+                    if (Math.abs(e.originalEvent.changedTouches[0].pageX - startPoint.x) > Math.abs(e.originalEvent.changedTouches[0].pageY - startPoint.y)) {
+                        // event.preventDefault();
+                    } else {
+                        canSlide = false;
+                    }
+                })
+                .on('touchend', '.coupons', function (e) {
+                    //如果是上下滑动，这里就直接返回了
+                    if (!canSlide) {
+                        canSlide = true;
+                        return true;
+                    }
+                    //点击除当前左滑对象之外的任意其他位置
+                    if (lastObject && currentObject != lastObject) {
+                        //右滑→
+                        $(lastObject).removeClass("animate-slide");
+                        $(lastObject).children().children('img').hide();
+                        // $(lastObject).children('.right').parent().css('overflow','hidden')	
+                        //清空上一个左滑的对象
+                        lastObject = undefined;
+                    }
+                    var diffX = e.originalEvent.changedTouches[0].pageX - startPoint.x;
+                    if (diffX < -diffXDistance) {
+                        //左滑←
+                        $(currentObject).addClass("animate-slide");
+                        $(currentObject).children().children('img').show();
+                        $(currentObject).children('.right').css('overflow', 'visible')
+                        if (lastObject && lastObject != currentObject) {
+                            //右滑→
+                            $(currentObject).removeClass("animate-slide");
+                            $(currentObject).children().children('img').hide();
+                            $(currentObject).children('.right').css('overflow', 'hidden')
+                        }
+                        //记录上一个左滑的对象
+                        lastObject = currentObject;
+                    } else if (diffX >= diffXDistance) {
+                        if (currentObject == lastObject) {
+                            //右滑→
+                            $(lastObject).removeClass("animate-slide");
+                            $(lastObject).children().children('img').hide();
+                            $(lastObject).children('.right').css('overflow', 'hidden')
+                            //清空上一个左滑的对象
+                            lastObject = undefined;
+                        }
+                    }
+                });
+        });
+    </script>
+</body>
+
+</html>

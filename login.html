@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <link media="all" rel="stylesheet" href="static/css/init.css" type="text/css">
+    <link media="all" rel="stylesheet" href="static/css/common.css" type="text/css">
+</head>
+
+<body>
+    <div class="wrapper clearfix">
+        <div class="welcome">
+            <h1>Hi~<br/>欢迎登录</h1>
+        </div>
+        <div class="input">
+            <input type="tel" placeholder="请输入手机号码" class="admin" maxlength="11">
+            <input type="password" placeholder="请输入密码" class="password textWord">
+            <input type="text" placeholder="请输入短信验证码" class="password textCode" style="display: none;">
+            <img src="./static/img/close@2x.png" alt="" class="number">
+            <img src="./static/img/close@2x.png" alt="" class="word">
+            <img src="./static/img/close@2x.png" alt="" class="code">
+            <span class="getCode" style="display: none;">获取验证码</span>
+        </div>
+        <div class="login clearfix goToCode">
+            <div class="remind">手机号或密码不正确</div>
+            <span class="change">修改密码</span>
+            <div class="goNext goToNext">登录</div>
+            <div class="goCode">
+                <span>验证码登录</span>
+                <img src="./static/img/arrow@2x.png" alt="">
+            </div>
+        </div>
+        <div class="login clearfix goToWord" style="display: none;">
+            <div class="remind">手机验证码不正确</div>
+            <div class="goNext1 goToNext">登录</div>
+            <div class="goWord">
+                <span>密码登录</span>
+                <img src="./static/img/arrow@2x.png" alt="">
+            </div>
+        </div>
+        <div class="bottom clearfix">
+            <p>联系客服: <a href="tel:0755-28286677">0755-28286677</a></p>
+            <p>登录即表示同意车多的<span>用户服务协议</span></p>
+        </div>
+    </div>
+    <script src="./static/js/rem.js"></script>
+    <script src="./static/js/jquery-1.9.1.js"></script>
+    <script src="./static/js/common.js"></script>
+    
+</body>
+
+</html>

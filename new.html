@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>新增优惠券</title>
+    <link media="all" rel="stylesheet" href="static/css/init.css" type="text/css">
+    <link media="all" rel="stylesheet" href="static/css/common.css" type="text/css">
+    <link media="all" rel="stylesheet" href="static/css/ydui.css" type="text/css">
+</head>
+
+<body>
+    <div class="new clearfix">
+        <div class="city">
+            <span>使用门店</span>
+            <input id="J_Address" class="cell-input" type="text" readonly="" placeholder="请选择城市">
+            <span>(全城通用)</span>
+        </div>
+        <div class="setting">
+            <span>设置券名</span>
+            <input type="text" placeholder="10个字内，如：标准洗车-车险专享">
+        </div>
+        <div class="type">
+            <span>服务类型</span>
+            <span class="choose">请选择服务类型</span>
+        </div>
+        <div class="time">
+            <span>有效期</span>
+            <span>自赠送<input class="write" type="number" placeholder="输入">
+                天后生效，有效期
+                <input class="write" type="number" placeholder="输入">
+                天
+            </span>
+            <img src="" alt="">
+        </div>
+        <div class="number1">
+            <span>数量</span>
+            <span class="minus gray">-</span>
+            <span class="num">0</span>
+            <span class="plus">+</span>
+        </div>
+        <div class="confirm">确定</div>
+        <div class="remind clearfix">
+            <div class="text">
+                <h2>温馨提示</h2>
+                <span>
+                    1、该卡券功能主要帮助第三方进行营销；<br>
+                    2、赠送出的卡券未消费可回收并退款；<br>
+                    3、如您的客服在X天内可对您售卖的产品<br>
+                    进行退款，建议您将有效期设置为赠送后<br>
+                    X天生效，避免卡券已核销无法退款。
+                </span>
+                <p class="know">知道了</p>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="changeBg"></div>
+            <div class="content">
+                <div class="first">
+                    <span class="cancel">取消</span>
+                    <span>请选择服务类型</span>
+                    <span class="final">确定</span>
+                </div>
+                <div class="serviceType">
+                    <p>标准洗车</p>
+                    <p>精致洗车</p>
+                    <p>手工打蜡</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./static/js/rem.js"></script>
+    <script src="./static/js/jquery-1.9.1.js"></script>
+    <script src="./static/js/common.js"></script>
+    <script src="./static/js/ydui.citys.js"></script>
+    <script src="./static/js/ydui.js"></script>
+    <script>
+        $(function () {
+            var now,
+                last;
+            $('.serviceType').children().on('click', function () {
+                now = this;
+                if (now != last) {
+                    $(now).addClass('black');
+                    $(last).removeClass('black');
+                    last = now;
+                } else {
+                    $(now).addClass('black');
+                }
+                $('.final').on('click', function () {
+                    var typeVal = $(now).text();
+                    $('.choose').text(typeVal).css('color', '#08101AFF');
+                    $(now).removeClass('black');
+                    $('.bottom').hide();
+                });
+            });
+            $('.cancel').on('click',function(){
+                $('.bottom').hide();
+            });
+            $('.choose').on('click', function () {
+                $('.bottom').toggle();
+            });
+            $('.changeBg').on('click', function () {
+                $('.bottom').toggle();
+            });
+            $('.confirm').on('click', function () {
+                $('.remind').show();
+            });
+            $('.know').on('click', function () {
+                window.location.href = './coupons.html';
+            });
+            $('.minus').on('click', function () {
+                if ($('.num').text() >= 1) {
+                    $('.num').text(function (i, origText) {
+                        return origText -= 1;
+                    })
+                }
+                if ($('.num').text() == 0) {
+                    $('.minus').css('color', '#CDCBCCFF');
+                }
+            });
+            $('.plus').on('click', function () {
+                $('.num').text(function (i, origText) {
+                    var origText = parseInt(origText);
+                    return origText += 1;
+                });
+                if ($('.num').text() !== 0) {
+                    $('.minus').css('color', '#454948FF');
+                    $('.confirm').css('background','rgba(16, 196, 167, 1)');
+                }
+            });
+        });
+
+        
+//   默认调用
+ 
+        !function () {
+            var $target = $('#J_Address');
+
+            $target.citySelect();
+
+            $target.on('click', function (event) {
+                event.stopPropagation();
+                $target.citySelect('open');
+            });
+
+            $target.on('done.ydui.cityselect', function (ret) {
+                $(this).val(ret.provance + ' ' + ret.city + ' ' + ret.area);
+            });
+        }();
+       
+    </script>
+</body>
+
+</html>

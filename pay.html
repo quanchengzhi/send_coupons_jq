@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>赠送卡券</title>
+    <link media="all" rel="stylesheet" href="static/css/init.css" type="text/css">
+    <link media="all" rel="stylesheet" href="static/css/common.css" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="payImg">
+            <img src="./static/img/successful_payment@2x.png" alt="">
+        </div>  
+        <div class="paySuccess">支付成功</div>
+        <div class="company">深圳车多网络技术有限公司</div>
+        <div class="showMoney">¥32.80</div>
+        <div class="check">查看赠券记录</div>
+    </div>
+    <script src="./static/js/rem.js"></script>
+    <script src="./static/js/jquery-1.9.1.js"></script>
+    <script src="./static/js/common.js"></script>
+    <script>
+        $(function(){
+            $('.check').on('click',function(){
+                window.location.href = './records.html'
+            })
+        })
+    </script>
+</body>
+
+</html>

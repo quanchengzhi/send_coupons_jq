@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>修改密码</title>
+    <link media="all" rel="stylesheet" href="static/css/init.css" type="text/css">
+    <link media="all" rel="stylesheet" href="static/css/common.css" type="text/css">
+</head>
+
+<body>
+    <div class="wrapper clearfix">
+        <div class="welcome reset">
+            <h1>请输入手机号验证</h1>
+        </div>
+        <div style="display: none;" class="welcome setting1">
+            <h1>请设置新密码</h1>
+        </div>
+        <div class="input reset">
+            <input type="tel" placeholder="请输入绑定的手机号码" class="admin" maxlength="11">
+            <input type="password" placeholder="请输入验证码" style="margin-top: 0.85rem;" class="password">
+            <span class="getCode" style="margin-bottom: 1.57rem;">获取验证码</span>
+            <p></p>
+        </div>
+        <div class="input setting1 clearfix" style="display: none;">
+            <input type="tel" placeholder="请输入6-16位新密码" class="admin">
+            <input type="password" placeholder="请再次输入密码" style="margin-top: 0.85rem;" class="password">
+            <p></p>
+        </div>
+        <div class="btn">确定</div>
+        <div style="display: none;" class="remind" id="remind">手机号或验证码错误</div>
+        <div style="display: none;" class="remind" id="remind1">密码设置成功</div>
+        <div style="display: none;" class="remind" id="remind2">密码格式错误或密码不相同</div>
+        <div style="display: none;" class="btn1">确定</div>
+    </div>
+    <script src="./static/js/rem.js"></script>
+    <script src="./static/js/jquery-1.9.1.js"></script>
+    <script src="./static/js/common.js"></script>
+</body>
+
+</html>

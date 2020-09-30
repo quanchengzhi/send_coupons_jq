@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>赠送卡券</title>
+    <link media="all" rel="stylesheet" href="static/css/init.css" type="text/css">
+    <link media="all" rel="stylesheet" href="static/css/common.css" type="text/css">
+</head>
+
+<body>
+    <div class="container clearfix">
+        <div class="mescroll" id="mescroll" style="margin-top: 0.5rem;height: auto;">
+            <ul class="allCoupons" id="allCoupons">
+                <li class="coupons">
+                    <span class="left">
+                        <i>¥</i>
+                        <i>50</i></span>
+                    <span class="mid">
+                        <p>标准洗车-车险专享</p>
+                        <p>深圳全城通用</p>
+                        <p>自用户领取10天后生效</p>
+                        <p>有效期30天</p>
+                    </span>
+                    <span class="right clearfix">
+                        <span>赠送</span>
+                        <img src="./static/img/card_del@2x.png" alt="">
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="person">
+            <span>赠送人</span>
+            <input type="text" placeholder="请输入想要赠送的手机号码" maxlength="11" class="telNum">
+        </div>
+        <div class="pay">支付方式</div>
+        <div class="payType">
+            <img src="./static/img/pay_icon_wechat@2x.png" alt="">
+            <span>微信支付</span>
+            <img src="./static/img/selection@2x.png" alt="">
+        </div>
+        <div class="payMoney">
+            <span>¥<i>32.80</i></span>
+            <span class="giving">赠送</span>
+        </div>
+    </div>
+    <script src="./static/js/rem.js"></script>
+    <script src="./static/js/jquery-1.9.1.js"></script>
+    <script src="./static/js/common.js"></script>
+    <script>
+        $(function () {
+            var reg = /^\d{11}$/
+            $('.giving').on('click', function () {
+                if (reg.test($('.telNum').val())) {
+                    $('.giving').css('color','#10C4A7FF')
+                    window.location.href = './pay.html';
+                }
+            })
+            $('.telNum').on('input', function () {
+                if (reg.test($('.telNum').val())) {
+                    $('.giving').css('background','#10C4A7FF')
+                }else{
+                    $('.giving').css('background','#93E4D7')
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
